@@ -15,7 +15,7 @@ public class BankDetails {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	Integer id;
 	
-	Long accNo;
+	Integer accNo;
 	
 	String userName;
 	
@@ -31,11 +31,11 @@ public class BankDetails {
 		this.id = id;
 	}
 
-	public Long getAccNo() {
+	public Integer getAccNo() {
 		return accNo;
 	}
 
-	public void setAccNo(Long accNo) {
+	public void setAccNo(Integer accNo) {
 		this.accNo = accNo;
 	}
 
@@ -69,7 +69,7 @@ public class BankDetails {
 				+ ", age=" + age + "]";
 	}
 
-	public BankDetails(Integer id, Long accNo, String userName, String ifscCode, int age) {
+	public BankDetails(Integer id, Integer accNo, String userName, String ifscCode, int age) {
 		super();
 		this.id = id;
 		this.accNo = accNo;

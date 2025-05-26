@@ -6,19 +6,20 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sbi.bank.entity.BankDetails;
-import com.sbi.bank.repo.Bankrepo;
+import com.sbi.bank.service.Bankservice;
 
 @RestController
 public class BankController {
 	
-	
+	@Autowired
+	Bankservice servic;
 	
 	@PostMapping("/User")
 	public String createAc(@RequestBody BankDetails bankDetails) {
 		
 		
 		
-		return "account has been created";
+		return servic.createAc(bankDetails);
 	}
 	
 }
