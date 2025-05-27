@@ -14,11 +14,11 @@ public class Bankservice {
 
 	public String createAc(BankDetails bankDetails) {
 
-		if (bankrepo.existsById(bankDetails.getAccNo())) {
-			bankrepo.save(bankDetails);
+		if (bankrepo.findByaccNo(bankDetails.getAccNo()).isPresent()) {
+			return "bank account already exist in the database";
 
 		} else
-			return "bank account already exist in the database";
+			bankrepo.save(bankDetails);
 
 		return "bank account has been created successfully";
 

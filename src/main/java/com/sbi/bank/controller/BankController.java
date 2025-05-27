@@ -10,16 +10,14 @@ import com.sbi.bank.service.Bankservice;
 
 @RestController
 public class BankController {
-	
+
 	@Autowired
 	Bankservice servic;
-	
+
 	@PostMapping("/User")
 	public String createAc(@RequestBody BankDetails bankDetails) {
-		
-		
-		
+
 		return servic.createAc(bankDetails);
 	}
-	
+
 }
